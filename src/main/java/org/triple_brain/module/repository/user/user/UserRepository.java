@@ -1,4 +1,4 @@
-package org.triple_brain.module.repository.user;
+package org.triple_brain.module.repository.user.user;
 
 import org.triple_brain.model.User;
 
