@@ -1,10 +1,10 @@
 package org.triple_brain.module.repository.user.user;
 
 /**
- * @author Vincent Blouin
+ * Copyright Mozilla Public License 1.1
  */
 public class ExistingUserException extends UserRepositoryException {
-    public ExistingUserException(String email) {
-        super("A user already exist with email: " + email);
+    public ExistingUserException(String userNameOrEmail) {
+        super("A user already exist with username or email: " + userNameOrEmail);
     }
 }

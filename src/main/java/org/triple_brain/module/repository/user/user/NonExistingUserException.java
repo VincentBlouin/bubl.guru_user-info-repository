@@ -1,7 +1,7 @@
 package org.triple_brain.module.repository.user.user;
 
 /**
- * @author Vincent Blouin
+ * Copyright Mozilla Public License 1.1
  */
 public class NonExistingUserException extends UserRepositoryException {
     public NonExistingUserException(String identifier) {
