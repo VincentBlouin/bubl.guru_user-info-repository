@@ -1,4 +1,4 @@
-package org.triple_brain.module.repository.user.user;
+package org.triple_brain.module.repository.user;
 
 /**
  * Copyright Mozilla Public License 1.1

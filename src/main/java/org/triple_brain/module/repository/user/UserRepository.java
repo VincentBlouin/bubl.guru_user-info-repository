@@ -1,4 +1,4 @@
-package org.triple_brain.module.repository.user.user;
+package org.triple_brain.module.repository.user;
 import org.codehaus.jettison.json.JSONException;
 import org.triple_brain.module.model.User;
 import org.codehaus.jettison.json.JSONObject;
