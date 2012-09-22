@@ -11,7 +11,7 @@ public interface UserRepository {
     User findById(String id) throws NonExistingUserException;
     User findByUsername(String username) throws NonExistingUserException;
     User findByEmail(String email) throws NonExistingUserException;
-    boolean usernameExists(String username);
-    boolean emailExists(String email);
+    Boolean usernameExists(String username);
+    Boolean emailExists(String email);
     JSONObject findByIdAsJson(String id) throws NonExistingUserException, JSONException;
 }
