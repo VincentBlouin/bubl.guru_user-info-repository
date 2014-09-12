@@ -1,11 +1,12 @@
+/*
+ * Copyright Vincent Blouin under the Mozilla Public License 1.1
+ */
+
 package org.triple_brain.module.repository.user;
 import org.codehaus.jettison.json.JSONException;
 import org.triple_brain.module.model.User;
 import org.codehaus.jettison.json.JSONObject;
 
-/**
- * Copyright Mozilla Public License 1.1
- */
 public interface UserRepository {
     void save(User user);
     User findById(String id) throws NonExistingUserException;
