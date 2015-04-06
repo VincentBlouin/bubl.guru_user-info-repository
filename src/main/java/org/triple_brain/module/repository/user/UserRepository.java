@@ -13,6 +13,6 @@ public interface UserRepository {
     User findByEmail(String email) throws NonExistingUserException;
     Boolean usernameExists(String username);
     Boolean emailExists(String email);
-    void resetPassword(User user);
-    UserForgetPasswordToken getUserForgetPasswordToken();
+    void generateForgetPasswordToken(User user);
+    UserForgetPasswordToken getUserForgetPasswordToken(User user);
 }
