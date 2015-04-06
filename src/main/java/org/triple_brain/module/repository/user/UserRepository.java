@@ -15,4 +15,5 @@ public interface UserRepository {
     Boolean emailExists(String email);
     void generateForgetPasswordToken(User user);
     UserForgetPasswordToken getUserForgetPasswordToken(User user);
+    void changePassword(User user);
 }
