@@ -5,7 +5,7 @@
 package org.triple_brain.module.repository.user;
 
 import org.triple_brain.module.model.User;
-import org.triple_brain.module.model.forget_password.UserForgetPasswordToken;
+import org.triple_brain.module.model.forgot_password.UserForgotPasswordToken;
 
 public interface UserRepository {
     User createUser(User user);
@@ -13,7 +13,7 @@ public interface UserRepository {
     User findByEmail(String email) throws NonExistingUserException;
     Boolean usernameExists(String username);
     Boolean emailExists(String email);
-    void generateForgetPasswordToken(User user, UserForgetPasswordToken userForgetPasswordToken);
-    UserForgetPasswordToken getUserForgetPasswordToken(User user);
+    void generateForgetPasswordToken(User user, UserForgotPasswordToken userForgotPasswordToken);
+    UserForgotPasswordToken getUserForgetPasswordToken(User user);
     void changePassword(User user);
 }
