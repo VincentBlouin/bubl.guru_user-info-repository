@@ -2,10 +2,10 @@
  * Copyright Vincent Blouin under the GPL License version 3
  */
 
-package org.triple_brain.module.repository.user;
+package guru.bubl.module.repository.user;
 
-import org.triple_brain.module.model.User;
-import org.triple_brain.module.model.forgot_password.UserForgotPasswordToken;
+import guru.bubl.module.model.User;
+import guru.bubl.module.model.forgot_password.UserForgotPasswordToken;
 
 public interface UserRepository {
     User createUser(User user);
