@@ -4,8 +4,8 @@
   -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -32,6 +32,12 @@
         </license>
     </licenses>
 
+    <scm>
+        <connection>scm:git:git@github.com:VincentBlouin/bubl.guru_user-info-repository.git</connection>
+        <developerConnection>scm:git:git@github.com:VincentBlouin/bubl.guru_user-info-repository.git</developerConnection>
+        <url>git@github.com:VincentBlouin/bubl.guru_user-info-repository.git</url>
+    </scm>
+
     <developers>
         <developer>
             <id>vblouin</id>
@@ -41,9 +47,38 @@
             <roles>
                 <role>developer</role>
             </roles>
+            <organization>bubl.guru</organization>
+            <organizationUrl>about.bubl.guru</organizationUrl>
         </developer>
     </developers>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
     <dependencies>
         <dependency>
             <groupId>guru.bubl.module</groupId>
