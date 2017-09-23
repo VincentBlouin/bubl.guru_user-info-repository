@@ -6,10 +6,6 @@ package guru.bubl.module.repository.user;
 
 import guru.bubl.module.model.User;
 import guru.bubl.module.model.forgot_password.UserForgotPasswordToken;
-import org.codehaus.jettison.json.JSONArray;
-
-import java.util.List;
-import java.util.Locale;
 
 public interface UserRepository {
     User createUser(User user);
