@@ -7,6 +7,8 @@ package guru.bubl.module.repository.user;
 import guru.bubl.module.model.User;
 import guru.bubl.module.model.forgot_password.UserForgotPasswordToken;
 
+import java.util.List;
+
 public interface UserRepository {
     User createUser(User user);
     User findByUsername(String username) throws NonExistingUserException;
@@ -17,4 +19,8 @@ public interface UserRepository {
     UserForgotPasswordToken getUserForgetPasswordToken(User user);
     void changePassword(User user);
     void updatePreferredLocales(User user);
+    List<User> searchUsers(
+            String searchTerm,
+            User user
+    );
 }
