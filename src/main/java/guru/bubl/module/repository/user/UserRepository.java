@@ -7,6 +7,7 @@ package guru.bubl.module.repository.user;
 import guru.bubl.module.model.User;
 import guru.bubl.module.model.forgot_password.UserForgotPasswordToken;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface UserRepository {
