@@ -8,6 +8,7 @@ import guru.bubl.module.model.User;
 import guru.bubl.module.model.forgot_password.UserForgotPasswordToken;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 public interface UserRepository {
@@ -29,7 +30,7 @@ public interface UserRepository {
 
     void updatePreferredLocales(User user);
 
-    void updateConsultNotificationDate(User user);
+    Date updateConsultNotificationDate(User user);
 
     List<User> searchUsers(
             String searchTerm,
