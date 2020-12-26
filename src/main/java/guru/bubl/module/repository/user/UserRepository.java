@@ -12,14 +12,25 @@ import java.util.List;
 
 public interface UserRepository {
     User createUser(User user);
+
     User findByUsername(String username) throws NonExistingUserException;
+
     User findByEmail(String email) throws NonExistingUserException;
+
     Boolean usernameExists(String username);
+
     Boolean emailExists(String email);
+
     void generateForgetPasswordToken(User user, UserForgotPasswordToken userForgotPasswordToken);
+
     UserForgotPasswordToken getUserForgetPasswordToken(User user);
+
     void changePassword(User user);
+
     void updatePreferredLocales(User user);
+
+    void updateConsultNotificationDate(User user);
+
     List<User> searchUsers(
             String searchTerm,
             User user
